@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MembershipProject.Actions
 {
-    public enum ItemAction { EXIT, USERS_WITHOUT_ANSWER }
+    public enum ItemAction { EXIT, USERS_WITHOUT_ANSWER, RESET_USER_ANSWER }
     public static class ItemActionExtension
     {
         public static string nombreMenu(this ItemAction action)
@@ -13,8 +13,8 @@ namespace MembershipProject.Actions
             switch (action)
             {
                 case ItemAction.EXIT: return "SALIR";
-         
                 case ItemAction.USERS_WITHOUT_ANSWER: return "Clientes sin Respuesta";
+                case ItemAction.RESET_USER_ANSWER: return "Resetear Respuesta secreta";
             }
             return null;
         }
