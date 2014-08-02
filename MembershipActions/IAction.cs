@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MembershipProject.Actions
 {
-    interface IAction
+    public interface IAction
     {
         void doAction();
         void initialize(string[] args);

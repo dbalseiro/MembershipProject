@@ -53,6 +53,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\mb-circulo-mbfonline\SSO\SSOModels\SSOServices.csproj">
+      <Project>{A037016E-12FC-4417-8801-192B092798D7}</Project>
+      <Name>SSOServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MembershipActions\MembershipActions.csproj">
       <Project>{0C335EE9-AB7E-42BF-8202-78B877739809}</Project>
       <Name>MembershipActions</Name>

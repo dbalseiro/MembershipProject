@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MembershipProject.Actions
 {
-    class ActionFactory
+    public class ActionFactory
     {
         public static IAction create(ItemAction item, WriteLine writer)
         {

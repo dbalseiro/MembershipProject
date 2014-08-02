@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MembershipProject.Actions
 {
-    delegate void WriteLine(string s);
+    public delegate void WriteLine(string s);
 
     abstract class ActionTemplate
     {
