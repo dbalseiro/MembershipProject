@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MembershipProject", "MembershipProject\MembershipProject.csproj", "{C2955853-BE43-4FD9-8EFC-591DED961DC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MembershipCLI", "MembershipCLI\MembershipCLI.csproj", "{C2955853-BE43-4FD9-8EFC-591DED961DC3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSOServices", "..\mb-circulo-mbfonline\SSO\SSOModels\SSOServices.csproj", "{A037016E-12FC-4417-8801-192B092798D7}"
 EndProject
