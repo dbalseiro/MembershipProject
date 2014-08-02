@@ -11,6 +11,7 @@ namespace MembershipProject
     {
         private static ItemAction action;
         private static bool interactive = true;
+        private static string[] extraparams;
 
         static void Main(string[] args)
         {
@@ -50,7 +51,21 @@ namespace MembershipProject
         private static void doAction()
         {
             if (action == ItemAction.EXIT) return;
-            ActionFactory.create(action).doAction();
+            var executor = ActionFactory.create(action);
+            if (interactive) askforParams(executor.paramList());
+            executor.initialize(extraparams);
+            executor.doAction();
+        }
+
+        private static void askforParams(string[] paramList)
+        {
+            var l = new List<string>();
+            foreach (string s in paramList)
+            {
+                Console.Write(s + ": ");
+                l.Add(Console.ReadLine());
+            }
+            extraparams = l.ToArray();
         }
 
         private static void handleException(Exception ex)
@@ -68,7 +83,7 @@ namespace MembershipProject
         {
             try
             {
-                if (args.Length != 1) throw new ArgumentException();
+                if (args.Length < 1) throw new ArgumentException();
                 string sarg = args[0];
                 if (sarg == "?")
                 {
@@ -82,6 +97,13 @@ namespace MembershipProject
                     throw new ArgumentOutOfRangeException();
                 }
                 parseSelection(sarg);
+
+                List<string> arr = new List<string>();
+                for (int i = 1; i < args.Length; i++)
+                {
+                    arr.Add(args[i]);
+                }
+                extraparams = arr.ToArray();
             }
             catch (Exception e)
             {
@@ -92,7 +114,7 @@ namespace MembershipProject
 
         private static void usage()
         {
-            Console.WriteLine("USO: membership [arg]");
+            Console.WriteLine("USO: membership [arg] ...");
             Console.WriteLine("Si Arg es vacio se muestra programa interactivo");
             Console.WriteLine("Si arg es ? se muestra esta ayuda");
             Console.WriteLine("o puede ser alguna de las siguientes opciones");

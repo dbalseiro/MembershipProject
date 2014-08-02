@@ -8,5 +8,7 @@ namespace MembershipProject.Actions
     interface IAction
     {
         void doAction();
+        void initialize(string[] args);
+        string[] paramList();
     }
 }

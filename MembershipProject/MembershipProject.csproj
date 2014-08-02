@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\ActionFactory.cs" />
+    <Compile Include="Actions\ActionImplementations\ResetUserAnswerAction.cs" />
     <Compile Include="Actions\ActionImplementations\UsersWithoutAnswerAction.cs" />
     <Compile Include="Actions\IAction.cs" />
     <Compile Include="Actions\ItemAction.cs" />

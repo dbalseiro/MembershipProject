@@ -13,6 +13,7 @@ namespace MembershipProject.Actions
             {
                 case ItemAction.EXIT: return null;
                 case ItemAction.USERS_WITHOUT_ANSWER: return new UsersWithoutAnswerAction() as IAction;
+                case ItemAction.RESET_USER_ANSWER: return new ResetUserAnswerAction() as IAction;
             }
             return null;
         }
