@@ -18,40 +18,50 @@ namespace MembershipProject
             if (args != null && args.Length > 0)
             {
                 interactive = false;
-                try
-                {
-                    handleParams(args);
-                    doAction();
-                }
-                catch (Exception e)
-                {
-                    handleException(e);
-                }
+                cliLoop(args);
             }
             else
             {
                 interactive = true;
-                while (true)
+                interactiveLoop();
+            }
+        }
+
+        private static void interactiveLoop()
+        {
+            while (true)
+            {
+                printMenu();
+                try
                 {
-                    printMenu();
-                    try
-                    {
-                        selectAction();
-                        if (action == ItemAction.EXIT) break;
-                        doAction();
-                    }
-                    catch (Exception ex)
-                    {
-                        handleException(ex);
-                    }
+                    selectAction();
+                    if (action == ItemAction.EXIT) break;
+                    doAction();
                 }
+                catch (Exception ex)
+                {
+                    handleException(ex);
+                }
+            }
+        }
+
+        private static void cliLoop(string[] args)
+        {
+            try
+            {
+                handleParams(args);
+                doAction();
+            }
+            catch (Exception e)
+            {
+                handleException(e);
             }
         }
 
         private static void doAction()
         {
             if (action == ItemAction.EXIT) return;
-            var executor = ActionFactory.create(action);
+            var executor = ActionFactory.create(action, Console.WriteLine);
             if (interactive) askforParams(executor.paramList());
             executor.initialize(extraparams);
             executor.doAction();

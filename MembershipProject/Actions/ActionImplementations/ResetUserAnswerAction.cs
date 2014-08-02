@@ -9,10 +9,17 @@ using SSOServices.Services;
 
 namespace MembershipProject.Actions
 {
-    class ResetUserAnswerAction : IAction
+    class ResetUserAnswerAction : ActionTemplate, IAction
     {
+        #region ActionTemplate
+
+        public ResetUserAnswerAction(WriteLine w) : base(w) { }
+
+        #endregion
+
         private string username;
         private static string[] paramsDescription = { "Username" };
+
         #region IAction Members
 
         public void doAction()
@@ -20,14 +27,14 @@ namespace MembershipProject.Actions
             var user = Membership.GetUser(username);
             if (user == null) throw new NullReferenceException("El usuario no existe");
 
-            UsuarioService.ActualizarCampoUsuario((Guid)user.ProviderUserKey, "respuesta", "N/A");
+            UsuarioService.ActualizarCampoUsuario((Guid)user.ProviderUserKey, "respuesta", ActionHelper.NA);
             
             string resettedPassword = user.ResetPassword();
-            user.ChangePasswordQuestionAndAnswer(resettedPassword, "N/A", "N/A");
+            user.ChangePasswordQuestionAndAnswer(resettedPassword, ActionHelper.NA, ActionHelper.NA);
             string newPassword = AccountMembershipService.GeneraPasswordAleatoria();
             user.ChangePassword(resettedPassword, newPassword);
 
-            Console.WriteLine(newPassword);
+            write(newPassword);
         }
 
 
