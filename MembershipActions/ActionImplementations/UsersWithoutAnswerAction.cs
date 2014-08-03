@@ -24,8 +24,8 @@ namespace MembershipProject.Actions
                 foreach (string s in db.getStringValues("loweredusername"))
                 {
                     var user = Membership.GetUser(s);
-                    if (user.PasswordQuestion != "N/A") 
-                        Console.WriteLine(s);
+                    if (user.PasswordQuestion != "N/A")
+                        write(s);
                 }
             }
         }
