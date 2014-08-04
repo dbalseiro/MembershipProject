@@ -102,7 +102,7 @@ namespace MembershipProject
                     return;
                 }
                 int arg = int.Parse(sarg);
-                if (arg < 1 || arg > Enum.GetValues(typeof(ItemAction)).Length - 1)
+                if (arg < 1 || arg > ItemAction.Actions.Length - 1)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
@@ -134,7 +134,7 @@ namespace MembershipProject
         private static void printMenu()
         {
             int i = 0;
-            foreach (ItemAction item in Enum.GetValues(typeof(ItemAction)))
+            foreach (ItemAction item in ItemAction.Actions)
             {
                 Console.WriteLine(i++ + ")\t" + item.nombreMenu());
             }
@@ -151,7 +151,7 @@ namespace MembershipProject
         private static void parseSelection(string r)
         {
             int seleccion = int.Parse(r);
-            action = (ItemAction)Enum.GetValues(typeof(ItemAction)).GetValue(seleccion);
+            action = ItemAction.Actions[seleccion];
         }
     }
 }
