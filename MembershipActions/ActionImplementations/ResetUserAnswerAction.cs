@@ -7,18 +7,14 @@ using SSO.Services;
 using SSOServices.Services;
 
 
-namespace MembershipProject.Actions
+namespace MembershipProject.Actions.Implementation
 {
     class ResetUserAnswerAction : ActionTemplate, IAction
     {
-        #region ActionTemplate
-
-        public ResetUserAnswerAction(WriteLine w) : base(w) { }
-
-        #endregion
-
         private string username;
-        private static string[] paramsDescription = { "Username" };
+        private string newUserPassword;
+
+        private static string[] paramsDescription = { "Username", "New Password" };
 
         #region IAction Members
 
@@ -31,7 +27,14 @@ namespace MembershipProject.Actions
             
             string resettedPassword = user.ResetPassword();
             user.ChangePasswordQuestionAndAnswer(resettedPassword, ActionHelper.NA, ActionHelper.NA);
-            string newPassword = AccountMembershipService.GeneraPasswordAleatoria();
+
+            string newPassword = newUserPassword;
+
+            if (string.IsNullOrEmpty(newPassword))
+            {
+                newPassword = AccountMembershipService.GeneraPasswordAleatoria();
+            }
+
             user.ChangePassword(resettedPassword, newPassword);
 
             write(newPassword);
@@ -40,14 +43,29 @@ namespace MembershipProject.Actions
 
         public void initialize(string[] args)
         {
-            if (args == null || args.Length == 0) throw new ArgumentException("Debe especificar el cliente");
-            if (args.Length > 1) throw new ArgumentOutOfRangeException("Demasiados argumentos");
+            validate(args);
             username = args[0];
+            if (args.Length > 1)
+            {
+                newUserPassword = args[1].Trim();
+            }
+        }
+
+        private static void validate(string[] args)
+        {
+            if (args == null || args.Length == 0) throw new ArgumentException("Debe especificar el cliente");
+            if (args.Length > 2) throw new ArgumentOutOfRangeException("Demasiados argumentos");
+            if (string.IsNullOrEmpty(args[0])) throw new ArgumentNullException("username");
         }
 
         public string[] paramList()
         {
             return paramsDescription;
+        }
+
+        public string nombre()
+        {
+            return "Resetear pregunta y contrasenia de usuario";
         }
 
         #endregion

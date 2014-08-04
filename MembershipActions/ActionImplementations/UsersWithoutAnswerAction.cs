@@ -5,16 +5,10 @@ using System.Text;
 using System.Web.Security;
 using SSOServices.Services;
 
-namespace MembershipProject.Actions
+namespace MembershipProject.Actions.Implementation
 { 
     class UsersWithoutAnswerAction : ActionTemplate, IAction
     {
-        #region ActionTemplate
-
-        public UsersWithoutAnswerAction(WriteLine w) : base(w) { }
-
-        #endregion
-
         #region IAction Members
 
         public void doAction()
@@ -24,7 +18,7 @@ namespace MembershipProject.Actions
                 foreach (string s in db.getStringValues("loweredusername"))
                 {
                     var user = Membership.GetUser(s);
-                    if (user.PasswordQuestion != "N/A")
+                    //if (user.PasswordQuestion != "N/A")
                         write(s);
                 }
             }
@@ -36,6 +30,11 @@ namespace MembershipProject.Actions
         public string[] paramList()
         {
             return new List<string>().ToArray();
+        }
+
+        public string nombre()
+        {
+            return "Usuarios sin Respuesta cargada";
         }
 
         #endregion

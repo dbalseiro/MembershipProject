@@ -10,5 +10,6 @@ namespace MembershipProject.Actions
         void doAction();
         void initialize(string[] args);
         string[] paramList();
+        string nombre();
     }
 }

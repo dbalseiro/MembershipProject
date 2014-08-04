@@ -9,8 +9,9 @@ namespace MembershipProject.Actions
 
     abstract class ActionTemplate
     {
-        public WriteLine write { private set; get; }
+        public WriteLine write { set; get; }
 
+        public ActionTemplate() : this(null) { }
         public ActionTemplate(WriteLine w)
         {
             write = w;
