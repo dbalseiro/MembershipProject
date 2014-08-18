@@ -1,0 +1,252 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    background-color: #002b36;
+    font-size: .75em;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #839496;
+}
+
+a:link
+{
+    color: #268bd2;
+    text-decoration: underline;
+}
+a:visited
+{
+    color: #268bd2;
+}
+a:hover
+{
+    color: #268bd2;
+    text-decoration: none;
+}
+a:active
+{
+    color: #268bd2;
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #859900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+h2
+{
+    padding: 0 0 10px 0;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header
+{
+    position: relative;
+    margin-bottom: 0px;
+    color: #93a1a1;
+    padding: 0;
+}
+
+#header h1
+{
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    color: #b58900;
+    border: none;
+    line-height: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px !important;
+}
+
+#main
+{
+    padding: 30px 30px 15px 30px;
+    background-color: #eee8d5;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscrore */
+}
+
+#footer
+{
+    color: #839496;
+    background-color: #073642;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: .9em;
+}
+
+input[type="text"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+input[type="password"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:#dc322f;
+}
+
+#menucontainer
+{
+    margin-top:40px;
+}
+
+div#title
+{
+    display:block;
+    float:left;
+    text-align:left;
+    margin-top:-20px;
+}
+
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #dc322f;
+}
+
+#botonera 
+{
+	padding: 10px;
+	margin-top:20px;
+	position: relative;
+	float:none;
+}
+
+#botonera a 
+{
+	text-decoration: none;
+	padding:5px;
+	margin:10px;
+	background-color: #fdf6e3;
+	color: #2aa198 ;
+	border: solid 1px #586e75;
+	box-shadow: 2px 2px 1px #586e75;
+	border-radius: 4px;
+	font-weight: normal;
+	position: relative;
+}	
+	
+#botonera a:hover
+{
+	box-shadow: 1px 1px 1px black;
+	top: 1px;
+}
+
+#botonera a:active
+{
+	box-shadow: 0 0 black;
+	top: 2px;
+}
+
+.leftColumn
+{
+	float:left;
+	margin-left: 10px;	
+}
+
+.rightColumn
+{
+	float:right;
+	margin-right: 10px;
+}
+
+.two-columns 
+{
+	width: 450px;
+}
+
+.one-columns 
+{
+	width: 225px;
+}
+
+.three-columns 
+{
+	width: 675px;
+}
+
+.four-columns 
+{
+	width: 900px;
+}
+
+.columns-container 
+{
+	width:100%;
+	float:left;
+	margin-bottom:30px;
+}
+
+#title-container 
+{
+	height: 40px;
+	margin: 10px 0;
+}
