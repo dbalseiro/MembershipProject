@@ -12,8 +12,8 @@ namespace MembershipProject
         private static ItemAction action;
         private static bool interactive = true;
         private static string[] extraparams;
-
-        static void Main(string[] args)
+        private static int errorlevel=0;
+        static int Main(string[] args)
         {
             if (args != null && args.Length > 0)
             {
@@ -25,6 +25,7 @@ namespace MembershipProject
                 interactive = true;
                 interactiveLoop();
             }
+            return errorlevel;
         }
 
         private static void interactiveLoop()
@@ -87,6 +88,11 @@ namespace MembershipProject
                 Console.ReadLine();
                 Console.WriteLine();
             }
+            else
+            {
+                errorlevel = 1;
+            }
+
         }
 
         private static void handleParams(string[] args)
