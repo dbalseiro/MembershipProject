@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d3c69bae-c2ba-4244-a623-64bdb28d6da5" name="dbalseiro@DELL-VM-WIN7 2014-08-13 15:55:25" runUser="dell-vm-win7\dbalseiro" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Default Run Configuration" id="fb73b300-9a27-4dab-9636-76089b4a9216">
+    <Deployment runDeploymentRoot="C:\workspace\MercedesBenz\git\MembershipProject\TestResults\dbalseiro_DELL-VM-WIN7 2014-08-13 15_55_25">
+      <DeploymentItem filename="C:\workspace\MercedesBenz\git\MembershipProject\MembershipWeb\bin\MembershipWeb.dll" />
+    </Deployment>
+    <Hosts skipUnhostableTests="false" />
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2014-08-13T15:55:25.6042026-03:00" queuing="2014-08-13T15:55:31.2448276-03:00" start="2014-08-13T15:55:31.5260776-03:00" finish="2014-08-13T15:55:31.9635776-03:00" />
+  <TestDefinitions>
+    <UnitTest name="Index" storage="c:\workspace\mercedesbenz\git\membershipproject\membershipweb.tests\bin\release\membershipweb.tests.dll" id="6ef2e101-9bac-a491-83c1-74fe289e89c8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="dec3ac1c-4d9a-4bcc-a76f-362649765851" />
+      <TestMethod codeBase="C:\workspace\MercedesBenz\git\MembershipProject\MembershipWeb.Tests\bin\Release\MembershipWeb.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MembershipWeb.Tests.Controllers.HomeControllerTest, MembershipWeb.Tests" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6ef2e101-9bac-a491-83c1-74fe289e89c8" executionId="dec3ac1c-4d9a-4bcc-a76f-362649765851" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="dec3ac1c-4d9a-4bcc-a76f-362649765851" testId="6ef2e101-9bac-a491-83c1-74fe289e89c8" testName="Index" computerName="DELL-VM-WIN7" duration="00:00:00.0601805" startTime="2014-08-13T15:55:31.6510776-03:00" endTime="2014-08-13T15:55:31.9010776-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
