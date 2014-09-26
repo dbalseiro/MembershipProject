@@ -14,5 +14,11 @@ namespace MembershipProject.Actions
             where o.userid = u.idusuario
             and respuesta is null
         ";
+        public const string SQL_USUARIOS_RESPUESTANA = @"
+            select loweredusername
+            from usuario u, ora_aspnet_users o 
+            where o.userid = u.idusuario
+            and respuesta = 'N/A'
+        ";
     }
 }

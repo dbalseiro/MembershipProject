@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="ActionFactory.cs" />
     <Compile Include="ActionHelper.cs" />
+    <Compile Include="ActionImplementations\UsersAnswerNA.cs" />
     <Compile Include="ActionImplementations\ResetUserAnswerAction.cs" />
     <Compile Include="ActionImplementations\UsersWithoutAnswerAction.cs" />
     <Compile Include="ActionTemplate.cs" />

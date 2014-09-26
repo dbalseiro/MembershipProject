@@ -7,13 +7,13 @@ using SSOServices.Services;
 
 namespace MembershipProject.Actions.Implementation
 { 
-    class UsersWithoutAnswerAction : ActionTemplate, IAction
+    class UsersAnswerNA : ActionTemplate, IAction
     {
         #region IAction Members
 
         public void doAction()
         {
-            using (var db = new DBServices(ActionHelper.SQL_USUARIOS_SIN_RESPUESTA))
+            using (var db = new DBServices(ActionHelper.SQL_USUARIOS_RESPUESTANA))
             {
                 foreach (string s in db.getStringValues("loweredusername"))
                 {
@@ -34,7 +34,7 @@ namespace MembershipProject.Actions.Implementation
 
         public string nombre()
         {
-            return "Usuarios sin Respuesta cargada";
+            return "Usuarios cuya respuesta es NA pero que su pregunta no es NA";
         }
 
         #endregion
