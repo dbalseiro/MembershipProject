@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MembershipForms", "Membersh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MembershipWeb", "MembershipWeb\MembershipWeb.csproj", "{4ACF1AA2-C72A-4539-9555-FC5A59CEB812}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MembershipWeb.Tests", "MembershipWeb.Tests\MembershipWeb.Tests.csproj", "{70BA645B-D005-4695-A28E-50AE1FD07C12}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,15 +78,6 @@ Global
 		{4ACF1AA2-C72A-4539-9555-FC5A59CEB812}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4ACF1AA2-C72A-4539-9555-FC5A59CEB812}.Release|x64.ActiveCfg = Release|Any CPU
 		{4ACF1AA2-C72A-4539-9555-FC5A59CEB812}.Release|x86.ActiveCfg = Release|Any CPU
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Debug|x64.ActiveCfg = Debug|x64
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Debug|x64.Build.0 = Debug|x64
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Release|x64.ActiveCfg = Release|Any CPU
-		{70BA645B-D005-4695-A28E-50AE1FD07C12}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
